@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araştırmaya Davetlisiniz</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        #redirectToSurvey {
+            background-color: #4285f4; /* Google Blue */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Hover effect */
+        #redirectToSurvey:hover {
+            background-color: #357ae8; /* Slightly darker blue on hover */
+        }
+
+    </style>
+</head>
+  
+<body>
+  
+    <div class="container">
+        <br><br><br><h1>Araştırmaya Davetlisiniz!</h1>
+        <p>Değerli katılımcı, İstanbul Üniversitesi İktisat Fakültesi Pazarlama
+Anabilim Dalı Başkanı Prof. Dr. Süphan Nasır danışmanlığında yürütülen araştırma için bir ankete davetlisiniz. <br> <br> Anketi
+cevaplamak yaklaşık 6-7 dakikanızı alacaktır ve vereceğiniz
+bilgiler, anonim olarak yalnızca akademik amaçlı kullanılacaktır. . <br>Katılımınız için teşekkürler!<br> <br>
+        </p>
+
+      
+        <button id="redirectToSurvey">Anketi Görüntüle</button>
+
+    <script>
+        // Rastgele anket linkleri
+        var surveyLinks = [
+            "https://forms.gle/dMoB4wE1vxX597Yt8",
+            "https://forms.gle/E7LACSyZxQoU6eMfA",
+            "https://forms.gle/4KAFPNThvwg4eJAL8",
+            "https://forms.gle/cRRxyyCdSAtFb5k57",
+            "https://forms.gle/jV23DRAKnLYs1mEL9"
+        ];
+
+        // Rastgele anket yönlendirme fonksiyonu
+        function redirectToRandomSurvey() {
+            var randomIndex = Math.floor(Math.random() * surveyLinks.length);
+            var randomSurveyLink = surveyLinks[randomIndex];
+            window.location.href = randomSurveyLink;
+        }
+
+        // Butona tıklanınca rastgele anket yönlendirme
+        document.getElementById("redirectToSurvey").addEventListener("click", redirectToRandomSurvey);
+    </script>
+    </div>
+</body>
+</html>
